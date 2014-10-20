@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>rpf</string>
+	</array>
+	<key>name</key>
+	<string>VGL</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>begin</key>
+			<string>{</string>
+			<key>comment</key>
+			<string>Comments (block or inline)</string>
+			<key>end</key>
+			<string>}</string>
+			<key>name</key>
+			<string>comment.block.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>variable input types</string>
+			<key>match</key>
+			<string>VALUE</string>
+			<key>name</key>
+			<string>storage.type.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Environmentals</string>
+			<key>match</key>
+			<string>smp\$([A-Za-z][A-Za-z0-9_]+)</string>
+			<key>name</key>
+			<string>constant.other.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Default VGL Libraries</string>
+			<key>match</key>
+			<string>\$([A-Za-z][A-Za-z0-9_]+)</string>
+			<key>name</key>
+			<string>constant.other.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Default C Libraries</string>
+			<key>match</key>
+			<string>STD_([A-Za-z][A-Za-z0-9_]+)</string>
+			<key>name</key>
+			<string>constant.other.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>custom libraries</string>
+			<key>match</key>
+			<string>LIB_FILEKIT</string>
+			<key>name</key>
+			<string>entity.name.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Definitions</string>
+			<key>match</key>
+			<string>(GLOBAL|ROUTINE|ENDROUTINE|NOW|INSTANCE)</string>
+			<key>name</key>
+			<string>constant.language.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>options</string>
+			<key>match</key>
+			<string>(LIBRARY|STANDARD_LIBRARY|NAME|COMPILE_OPTION|WINDOWS|FILE|DATE|MODE|NOTPROTECTED|DEBUG|NOWAIT|INTERACTIVE|QUIETLY|NOWAIT|ARRAY_SIZE|WRITE TRANSACTION|READ TRANSACTION|current_file|current_line|action_status)</string>
+			<key>name</key>
+			<string>support.type.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>sytem functions</string>
+			<key>match</key>
+			<string>(JOIN|EXIT|SET|START|DECLARE|ENABLE|SPAWN|READ|WRITE|ASCII|LOGICAL|CONSTANT|RESTORE|RIGHTSTRING|LEFTSTRING|STRINGLENGTH|SPLITWORDS|STRIP|TOUPPER|SUBSTRING|INDEX|ARRAY)</string>
+			<key>name</key>
+			<string>support.function.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>database functions</string>
+			<key>match</key>
+			<string>(UPDATE|SELECT|COMMIT|ASSIGN)</string>
+			<key>name</key>
+			<string>support.function.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>sub options and some indicators</string>
+			<key>match</key>
+			<string>(FORMAT|ACTIVE|COMITTED|FOUND_MATCH|EMPTY)</string>
+			<key>name</key>
+			<string>variable.parameter.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>output destination</string>
+			<key>match</key>
+			<string>("DEFER/"|"DISPLAY/"|"PRINTER/"|"MAIL/"|"LOCAL/"|"DEFAULT_LABEL"|"DEFAULT_TEXT"|"EDIT/")</string>
+			<key>name</key>
+			<string>string.quoted.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>variables</string>
+			<key>match</key>
+			<string>v_([A-Za-z][A-Za-z0-9_]+)</string>
+			<key>name</key>
+			<string>string.unquoted.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>flow / control indicators</string>
+			<key>match</key>
+			<string>(IF|ELSE|THEN|ENDIF|REPEAT|UNTIL|DO|WHILE|ENDWHILE|FOR|WHERE|AND|NOT)</string>
+			<key>name</key>
+			<string>keyword.control.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>routine functions</string>
+			<key>match</key>
+			<string>(flash_message|write_line_to_file|write_log|size_of_array|start_file_search|start_file_copy|start_file_deletion)</string>
+			<key>name</key>
+			<string>entity.name.function.vgl</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.vgl</string>
+	<key>uuid</key>
+	<string>2f5ed3d7-820b-4b39-bbc7-eca52542045b</string>
+</dict>
+</plist>

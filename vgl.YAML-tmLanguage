@@ -1,0 +1,73 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: VGL
+scopeName: source.vgl
+fileTypes: [rpf]
+uuid: 2f5ed3d7-820b-4b39-bbc7-eca52542045b
+
+patterns:
+- name: comment.block.vgl
+  comment: Comments (block or inline)
+  begin: '{'
+  end: '}'
+
+- name: storage.type.vgl
+  comment: variable input types
+  match: VALUE
+
+- name: constant.other.vgl
+  comment: Environmentals
+  match: smp\$([A-Za-z][A-Za-z0-9_]+)
+
+- name: constant.other.vgl
+  comment: Default VGL Libraries
+  match: \$([A-Za-z][A-Za-z0-9_]+)
+
+- name: constant.other.vgl
+  comment: Default C Libraries
+  match: STD_([A-Za-z][A-Za-z0-9_]+)
+
+- name: entity.name.vgl
+  comment: custom libraries
+  match: LIB_FILEKIT
+
+- name: constant.language.vgl
+  comment: Definitions
+  match: (GLOBAL|ROUTINE|ENDROUTINE|NOW|INSTANCE)
+
+- name: support.type.vgl
+  comment: options
+  match: (LIBRARY|STANDARD_LIBRARY|NAME|COMPILE_OPTION|WINDOWS|FILE|DATE|MODE|NOTPROTECTED|DEBUG|NOWAIT|INTERACTIVE|QUIETLY|NOWAIT|ARRAY_SIZE|WRITE TRANSACTION|READ TRANSACTION|current_file|current_line|action_status)
+
+- name: support.function.vgl
+  comment: sytem functions
+  match: (JOIN|EXIT|SET|START|DECLARE|ENABLE|SPAWN|READ|WRITE|ASCII|LOGICAL|CONSTANT|RESTORE|RIGHTSTRING|LEFTSTRING|STRINGLENGTH|SPLITWORDS|STRIP|TOUPPER|SUBSTRING|INDEX|ARRAY)  
+
+- name: support.function.vgl
+  comment: database functions
+  match: (UPDATE|SELECT|COMMIT|ASSIGN) 
+
+- name: variable.parameter.vgl
+  comment: sub options and some indicators
+  match: (FORMAT|ACTIVE|COMITTED|FOUND_MATCH|EMPTY)
+
+- name: string.quoted.vgl
+  comment: output destination
+  match: ("DEFER/"|"DISPLAY/"|"PRINTER/"|"MAIL/"|"LOCAL/"|"DEFAULT_LABEL"|"DEFAULT_TEXT"|"EDIT/")
+
+- name: string.unquoted.vgl
+  comment: variables
+  match: v_([A-Za-z][A-Za-z0-9_]+)
+
+- name: keyword.control.vgl
+  comment: flow / control indicators 
+  match: (IF|ELSE|THEN|ENDIF|REPEAT|UNTIL|DO|WHILE|ENDWHILE|FOR|WHERE|AND|NOT)
+
+- name: keyword.operator.vgl
+  comment: logical operators
+  match: (TRUE|FALSE|EXISTS|=|<>|>|<|!=)
+
+  name: entity.name.function.vgl
+  comment: routine functions
+  match: (flash_message|write_line_to_file|write_log|size_of_array|start_file_search|start_file_copy|start_file_deletion)
+...
