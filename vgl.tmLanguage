@@ -5,6 +5,8 @@
 	<key>fileTypes</key>
 	<array>
 		<string>rpf</string>
+		<string>caf</string>
+		<string>laf</string>
 	</array>
 	<key>name</key>
 	<string>VGL</string>
