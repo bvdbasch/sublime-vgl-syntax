@@ -2,7 +2,7 @@
 ---
 name: VGL
 scopeName: source.vgl
-fileTypes: [rpf]
+fileTypes: [rpf,caf,laf]
 uuid: 2f5ed3d7-820b-4b39-bbc7-eca52542045b
 
 patterns:
